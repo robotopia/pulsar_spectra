@@ -487,10 +487,10 @@ def iminuit_fit_spectral_model(
     v0_Hz = (
         10 ** ((np.log10(min(freqs_MHz)) + np.log10(max(freqs_MHz))) / 2) * 1e6
     )  # reference frequency is the logarithmic centre frequency
-    freqs_Hz = np.array(freqs_MHz, dtype=np.float128) * 1e6
-    bands_Hz = np.array(bands_MHz, dtype=np.float128) * 1e6
-    fluxs_Jy = np.array(fluxs_mJy, dtype=np.float128) / 1e3
-    flux_errs_Jy = np.array(flux_errs_mJy, dtype=np.float128) / 1e3
+    freqs_Hz = np.array(freqs_MHz, dtype=np.longdouble) * 1e6
+    bands_Hz = np.array(bands_MHz, dtype=np.longdouble) * 1e6
+    fluxs_Jy = np.array(fluxs_mJy, dtype=np.longdouble) / 1e3
+    flux_errs_Jy = np.array(flux_errs_mJy, dtype=np.longdouble) / 1e3
 
     # Load model settings
     model_dict = model_settings()
